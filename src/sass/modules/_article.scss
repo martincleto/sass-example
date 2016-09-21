@@ -1,0 +1,19 @@
+$this: 'article';
+
+.#{$this} {
+
+  padding: rem($padding---default);
+
+  &__title {
+    @extend %header;
+
+    color: $color---primary;
+    margin-top: rem(60px);
+  }
+
+  @include breakpoint(medium) {
+    flex: 1 1 auto;
+    width: 70%;
+    padding: 0;
+  }
+}

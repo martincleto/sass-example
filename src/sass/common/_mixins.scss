@@ -1,0 +1,34 @@
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@mixin breakpoint($point) {
+   @if $point == large {
+     @media (min-width: 70em) { @content ; }
+  }
+    @else if $point == medium {
+     @media (min-width: 50em) { @content ; }
+  }
+}
+
+//TODO Check if vendor prefixes are still needed here when PostCSS Autoprefixer is working
+
+@mixin linear-gradient($top, $bottom, $top-stop: 0%, $bottom-stop: 100%){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top $top-stop, $bottom $bottom-stop); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop($top-stop,$top), color-stop($bottom-stop,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top $top-stop,$bottom $bottom-stop); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top $top-stop,$bottom $bottom-stop); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top $top-stop,$bottom $bottom-stop); /* IE10+ */
+    background: linear-gradient(to bottom,  $top $top-stop,$bottom $bottom-stop); /* W3C */
+}
+
+@mixin circle() {
+
+}

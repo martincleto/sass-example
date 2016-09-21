@@ -1,0 +1,13 @@
+$fonts: (
+  title: #{'Pacifico', cursive},
+  text: #{'Raleway', sans-serif}
+);
+
+@function font($name) {
+  @if map-has-key($fonts, $name) {
+    @return map-get($fonts, $name);
+  }
+
+  @warn "Unknown `#{$name}` in $fonts.";
+  @return null;
+}

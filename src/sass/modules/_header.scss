@@ -1,0 +1,35 @@
+$this: 'header';
+$this-height: 50px;
+
+.#{$this} {
+  @include linear-gradient(lighten($color---primary, 15), $color---primary, 0%, 80%);
+
+  position: relative;
+  padding: rem(80px) rem($padding---default);
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: rem(($this-height * -1) / 2);
+    z-index: 1;
+    width: 100%;
+    height: rem($this-height);
+    background-color: $color---primary;
+    transform: skew(0, -2deg);
+  }
+
+  &__title {
+    position: relative;
+    z-index: 100;
+    color: $color---lightest;
+    font-family: font(title);
+    font-size: rem(50px);
+    text-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: rem(10px);
+
+    @include breakpoint(medium) {
+      font-size: rem(94px);
+    }
+  }
+}

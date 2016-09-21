@@ -1,0 +1,14 @@
+$this: 'footer';
+
+.#{$this} {
+  background-color: $color---neutral;
+  color: $color---lightest;
+  font-size: rem(11px);
+  text-align: center;
+  padding: rem(60px) 0;
+  overflow: auto;
+
+  @include breakpoint(medium) {
+      font-size: rem(14px);
+    }
+}
