@@ -1,0 +1,13 @@
+%link {
+    color: lighten($color---primary, 10);
+    transition:.5s;
+
+    &:hover,
+    &:active {
+      color: $color---primary;
+    }
+
+    &:visited {
+      color: $color---neutral;
+    }
+}

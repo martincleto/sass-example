@@ -1,0 +1,36 @@
+{
+  "name": "sass-example",
+  "version": "0.1.0",
+  "description": "Example of sass project",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martincleto/sass-example.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Santiago Martín-Cleto <martincleto@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martincleto/sass-example/issues"
+  },
+  "homepage": "https://github.com/martincleto/sass-example#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-copy": "0.0.2",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "dependencies": {
+    "normalize-scss": "^5.0.3"
+  }
+}
